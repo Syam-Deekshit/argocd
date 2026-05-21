@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: BookMyShow
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-      app: my-app
+      app: movie
   template:
     metadata:
       labels:
-        app: my-app
+        app: movie
     spec:
       containers:
       - name: cont-1
-        image: shaikmustafa/cycle
+        image: shaikmustafa/paytm:movie
         ports:
         - containerPort: 80
